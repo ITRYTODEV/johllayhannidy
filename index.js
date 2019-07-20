@@ -153,6 +153,7 @@ bot.on('message', function (message) {
 	let args = message.content.trim().split(/ +/g)
 	if (args[0].toLowerCase() === prefixe + "t") {
 	let say = args[1]
+	message.channel.bulkDelete(1)
 	message.channel.send(say)
 	}
 })
